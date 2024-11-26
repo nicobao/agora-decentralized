@@ -58,7 +58,7 @@ Associate zk proofs with an existing Atproto account. Users would log in with em
 ## Supporting Both Protocols (and Others Like Farcaster)
 
 ### Vision:
-RariMe becomes the core user identifier, binding to multiple `did:keys` (basic public keys) generated on the client side of the app (using the WebCrypto API or secure Android/iOS storage). These `did:keys` would then connect to:  
+RariMe becomes the core user identifier, binding to multiple `did:key`s (basic public keys) generated on the client side of the app (using the WebCrypto API or secure Android/iOS storage). These `did:key`s would then be cryptographically bound to:  
 - **Atproto `did:plc`** (hosted on behalf of the user).  
 - **Nostr Wallet** (if the user opts to post directly from it).
 
@@ -69,9 +69,9 @@ RariMe becomes the core user identifier, binding to multiple `did:keys` (basic p
 
 Alternatively, without changes to Nostr, it could pull data from an "Agora-owned Nostr public key."
 
-### Use Cases:
-- **Feed Customization:** Create feeds based on specific attributes (e.g., Ukrainians). Data origin and protocol are irrelevant since verifiability lies in the data itself.  
-- **Feed Aggregation:** Aggregate posts from multiple protocols, including centralized platforms, ensuring data integrity via ZK proofs.  
+### Algorithms:
+- **Feed Customization:** Create feeds based on specific attributes (e.g., Ukrainians). Data origin and protocols are *irrelevant* since verifiability lies in the data itself. **This is quite powerful**.
+- **Feed Aggregation:** Aggregate posts from multiple protocols, including centralized platforms, ensuring data integrity via the cryptographic chain of signatures ultimately bound to the RariMe ZK proofs.
 
 ### Future Enhancements:
 - Add **ZK reputation systems** to enhance trustworthiness.
