@@ -65,12 +65,13 @@ Associate zk proofs with an existing Atproto account. Users would log in with em
 ### Workflow:
 1. Every piece of data is signed with the `did:key` and sent to Atproto and Nostr infrastructure.  
 2. This data is cryptographically verifiable as originating from a single nullifier.  
-3. Modify Nostr to pull data from RariMe nullifiers rather than directly from Nostr wallet keys.  
 
-Alternatively, without changes to Nostr, it could pull data from an "Agora-owned Nostr public key."
+#### Nostr specific
+- Modify Nostr to pull data from RariMe nullifiers rather than directly from Nostr wallet keys.  
+- Alternatively, without changes to Nostr protocol, we could pull data from signed by the "Agora-owned Nostr private key" or more ideally from "any data that contains a chain of signatures linked to a ZK proof of certain attributes"
 
 ### Algorithms:
-- **Feed Customization:** Create feeds based on specific attributes (e.g., Ukrainians). Data origin and protocols are *irrelevant* since verifiability lies in the data itself. **This is quite powerful**.
+- **Feed Customization:** Create feeds based on specific attributes (e.g., Ukrainians). Data origin and protocols are *irrelevant* since verifiability lies in the data itself. **This is very powerful: Humans as the API instead of some protocol**.
 - **Feed Aggregation:** Aggregate posts from multiple protocols, including centralized platforms, ensuring data integrity via the cryptographic chain of signatures ultimately bound to the RariMe ZK proofs.
 
 ### Future Enhancements:
