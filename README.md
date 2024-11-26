@@ -14,7 +14,7 @@ Relevant sections:
 - Preserving true anonymity requires more than a pseudonymous "account."  
 - For anonymity, users should store post history and reputation in a zk wallet on their mobile device and send zk-proofs in real time.  
 - However, this approach does not support following "people," as it requires pseudonymous interactions. For such cases, an "account" (e.g., represented by a `did:plc` as in Bluesky) is sufficient. This is a different use case for a different audience.  
-- Posting directly from a wallet simplifies the process but requires users to have a wallet and demands new protocols to be built.  
+- Posting directly from a wallet simplifies the UX but requires users to have a wallet and demands new protocols to be built.  
 
 For a detailed thread summarizing this idea, see:  
 [Thread on Bluesky](https://bsky.app/profile/nicobao.dev/post/3l3tkmnefvr26)
