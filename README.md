@@ -76,3 +76,4 @@ Associate zk proofs with an existing Atproto account. Users would log in with em
 
 ### Future Enhancements:
 - Add **ZK reputation systems** to enhance trustworthiness.
+- Making RariMe compatible with ZKEmail so as to allow recovery of the RariMe private key with familiar UX.
