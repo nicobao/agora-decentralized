@@ -58,7 +58,7 @@ Associate zk proofs with an existing Atproto account. Users would log in with em
 ## Supporting Both Protocols (and Others Like Farcaster)
 
 ### Vision:
-**Rarimo protocol nullifier becomes the core user identifier**, binding to multiple `did:key`s (basic public keys) generated on the client side of the app (using the WebCrypto API or secure Android/iOS storage). These `did:key`s would then be cryptographically bound to:  
+**Rarimo protocol nullifier becomes the core user identifier**, binding to multiple `did:key`s (basic public keys) generated on the client side of the Agora app (using the standard WebCrypto API or secure Android/iOS storage). More or less one did:key per user device (smartphone, browser, etc). These `did:key`s would then be cryptographically bound to:  
 - **Atproto `did:plc`** (hosted on behalf of the user).  
 - **Nostr Wallet** (if the user opts to post directly from it).
 
