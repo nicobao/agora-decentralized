@@ -28,7 +28,7 @@ Atproto relies on a **Personal Data Store (PDS)**, a server that stores cryptogr
 ### Integration Approach:
 To integrate RariMe with Atproto, we could:  
 1. Fork the [Atproto PDS repository](https://github.com/bluesky-social/pds).  
-2. Modify it to support login via RariMe instead of email.  
+2. Modify it to support login directly via RariMe, besides email.  
 
 **Proposed Workflow:**
 - RariMe dynamically creates new PDS accounts based on shared attributes to protect user privacy.  
