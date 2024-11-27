@@ -39,7 +39,7 @@ To integrate RariMe with Atproto, we have multiple options.
 
 ### Option 1 - RariMe first:
 - login with RariMe on Agora like we do right now on Agora , but we also create a corresponding PDS and host it for you. We can bind our `did:key`s to the `did:plc` with simple signatures.
-- optionally users can instead associate your existing atproto account
+- optionally users can instead associate their existing atproto account
 - this requires:
     - Fork the [Atproto PDS repository](https://github.com/bluesky-social/pds).  
     - Modify it to support login directly via RariMe, besides email
