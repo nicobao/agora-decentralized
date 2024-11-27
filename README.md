@@ -101,4 +101,4 @@ did:keys are useful because they use built-in device crypto algorithms, that doe
 - Users can add their own Nostr Wallets and associate these `did:key` and RariMe proofs to it
 - when users post, we crosspost data to atproto and Nostr, if they added a Notr wallet 
 - data is defined extensively using semantics, especially the compatibility between protocols
-- we use these semantics to create cross-protocol feed aggregators (same as bskyfor algorithmic choice but instead of limiting the data origins to being on atproto we can integrate other protocols)
+- we use these semantics to create cross-protocol feed aggregators (same as bsky for algorithmic choice but instead of limiting the data origins to being on atproto we can integrate other protocols)
