@@ -30,7 +30,7 @@ Currently we use RariMe as follows:
 For a detailed thread summarizing this idea, see:  
 [Thread on Bluesky](https://bsky.app/profile/nicobao.dev/post/3l3tkmnefvr26)
 
-## How to Integrate Atproto (Bluesky) with RariMe (ZK Identity Wallet)
+## Integrate Atproto (Bluesky) with RariMe (ZK Identity Wallet)
 
 **Atproto Overview:**  
 Atproto relies on a **Personal Data Store (PDS)**, a server that stores cryptographic identifiers and personal data. To connect to your PDS, you need to provide an email address, which is kept off-protocol (not publicly shared).
@@ -56,7 +56,7 @@ To integrate RariMe with Atproto, we have multiple options.
 - does not require forking atproto PDS at all
 
 
-## Nostr Support
+## Integrate Nostr with RariMe (ZK Identity Wallet)
 
 ### Classic integration:
 - associate ZK proof nullifiers to Nostr Wallet key, broadcast that
