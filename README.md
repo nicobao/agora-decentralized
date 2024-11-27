@@ -5,6 +5,8 @@
 For more details, see:  
 [Vision Document](https://docs.google.com/document/d/1VWdhZ6uBQlab9cqlvhtWxywMnsYzXq6q/edit?usp=sharing&ouid=103751232663868193979&rtpof=true&sd=true)
 
+(our vision evolved since then though!)
+
 Relevant sections:  
 - **State of the Art**  
 - **3.3 Innovation**
@@ -28,7 +30,6 @@ Currently we use RariMe as follows:
 For a detailed thread summarizing this idea, see:  
 [Thread on Bluesky](https://bsky.app/profile/nicobao.dev/post/3l3tkmnefvr26)
 
-
 ## How to Integrate Atproto (Bluesky) with RariMe (ZK Identity Wallet)
 
 **Atproto Overview:**  
@@ -40,7 +41,7 @@ To integrate RariMe with Atproto, we could:
 2. Modify it to support login directly via RariMe, besides email.  
 
 ### Option 1 - RariMe first:
-- login with RariMe on Agora like we do right now on Agora , but we also create a corresponding PDS and host it for you. We can bind our `did:key`s to the did:plc` with simple signatures.
+- login with RariMe on Agora like we do right now on Agora , but we also create a corresponding PDS and host it for you. We can bind our `did:key`s to the `did:plc` with simple signatures.
 - optionally users can instead associate your existing atproto account
 
 ### Option 2 - same as option 1 but with enhanced privacy protection:
