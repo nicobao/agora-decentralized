@@ -28,7 +28,7 @@ Currently we use RariMe as follows:
 - Posting directly from a wallet simplifies the UX but requires users to have a wallet and demands new protocols to be built.  
 
 For a detailed thread summarizing this idea, see:  
-[Thread on Bluesky](https://bsky.app/profile/nicobao.dev/post/3l3tkmnefvr26)
+[Thread on Bluesky](https://bsky.app/profile/nicobao.dev/post/3l3tkmnefvr26) or refer to the [Vision Document](https://docs.google.com/document/d/1VWdhZ6uBQlab9cqlvhtWxywMnsYzXq6q/edit?usp=sharing&ouid=103751232663868193979&rtpof=true&sd=true).
 
 ## Integrate Atproto (Bluesky) with RariMe (ZK Identity Wallet)
 
@@ -79,7 +79,7 @@ To integrate RariMe with Atproto, we have multiple options.
 
 did:keys are useful because they use built-in device crypto algorithms, that does NOT require any user interaction to create signatures, while staying secure. They enable not to force users to constantly create proofs from RariMe.
 
-### Workflow:
+### Posting:
 1. Every piece of data is signed with the `did:key` and sent to Atproto and Nostr infrastructure (cross-posting)  
 2. This data is cryptographically verifiable as originating from a single nullifier.  
 
