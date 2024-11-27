@@ -97,7 +97,7 @@ did:keys are useful because they use built-in device crypto algorithms, that doe
 ## Current conclusion for Agora (in progress)
 
 - We keep our login with RariMe and associate it with the `did:key mechanism`
-- Users can choose to asosciate their atproto account to these did:key and ZK proof, otherwise Agora would default to registering and storing a new one on their behalf. Email is made optional (requires forking PDS).
+- Users can choose to associate their atproto account to these did:key and ZK proof, otherwise Agora would default to registering and storing a new PDS on their behalf. Email is made optional (requires forking PDS).
 - Users can add their own Nostr Wallets and associate these `did:key` and RariMe proofs to it
 - when users post, we crosspost data to atproto and Nostr, if they added a Notr wallet 
 - data is defined extensively using semantics, especially the compatibility between protocols
