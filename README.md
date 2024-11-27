@@ -17,7 +17,7 @@ Currently we use RariMe as follows:
 - User sends proof with RariMe app, proof contains a unique nullifier
 - Agora associates this nullifier with the `did:key`
 - login from another device means generating a new did:key and associating a new RariMe proof to it with the same nullifier 
-- users then sign all their content with the did:key seamlessly and securely on a third-party wallet without needing any external wallet dependency nor specific user interaction
+- users then sign all their content with the did:key seamlessly and securely from Agora frontend without needing any external wallet dependency nor specific user interaction
 - we broadcast these signed data and ZK proofs to Nostr. Currently we don't broadcast actual data, just hashes, so users can easily request data deletion from trusting our server.
 
 ### Summary of the Problem Space:
