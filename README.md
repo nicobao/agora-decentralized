@@ -37,12 +37,14 @@ Atproto relies on a **Personal Data Store (PDS)**, a server that stores cryptogr
 
 ### Integration Approach:
 To integrate RariMe with Atproto, we could:  
-1. Fork the [Atproto PDS repository](https://github.com/bluesky-social/pds).  
-2. Modify it to support login directly via RariMe, besides email.  
+.  
 
 ### Option 1 - RariMe first:
 - login with RariMe on Agora like we do right now on Agora , but we also create a corresponding PDS and host it for you. We can bind our `did:key`s to the `did:plc` with simple signatures.
 - optionally users can instead associate your existing atproto account
+- this requires:
+    - Fork the [Atproto PDS repository](https://github.com/bluesky-social/pds).  
+    - Modify it to support login directly via RariMe, besides email
 
 ### Option 2 - same as option 1 but with enhanced privacy protection:
 - multiple RariMe nullifiers from the same RariMe account bound to different ID attributes = creation of multiple Agora accounts created on the fly = creation of multiple PDS accounts
@@ -51,8 +53,9 @@ To integrate RariMe with Atproto, we could:
 - This would allow users to seamlessly manage multiple personas without impacting UX.  
 - If a nullifier is doxxed, either Agora or RariMe can detect this and request the generation or generate a new nullifier linked to a new account behind the scenes.
 
-Option 3: simplest approach, atproto first: 
+### Option 3: simplest approach, atproto first: 
 - Associate zk proofs with an existing Atproto account. Users would log in with atproto via email and by entering their handle (classic, that's their primary identifier), and then verify their identity, binding the proof to their `did:plc`.
+- does not require forking atproto PDS at all
 
 
 ## Nostr Support
