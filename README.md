@@ -18,7 +18,7 @@ Currently we use RariMe as follows:
 - Agora associates this nullifier with the `did:key`
 - login from another device means generating a new did:key and associating a new RariMe proof to it with the same nullifier 
 - users then sign all their content with the did:key seamlessly and securely on a third-party wallet without needing any dependency.
-- we broadcast these signed data and ZK proofs to Nostr
+- we broadcast these signed data and ZK proofs to Nostr. Currently we don't broadcast actual data, just hashes, so users can easily request data deletion from trusting our server.
 
 ### Summary of the Problem Space:
 - We focus on **zk-anonymous social interaction**, which differs from pseudonymous/public social apps.  
@@ -65,20 +65,14 @@ To integrate RariMe with Atproto, we could:
 - then post from Nostr normally 
 
 ### Approach to Nostr solely as a neutral infrastructure (what we do now): 
-- **Identifier:** Use ZK proof nullifiers and our `did:key`s directly as identifiers rather than relying on Nostr keys.
-- **Purpose:** Use Nostr infrastructure solely for broadcasting semantic data (proof + payload describing the specific data a nullifier sends).
+- Use ZK proof nullifiers and our `did:key`s directly as identifiers rather than relying on Nostr keys.
+- Use Nostr infrastructure solely for broadcasting semantic data (user's signed data and proof + payload describing the specific data a nullifier sends). We signed the Nostr data with a Nostr pub key that is owned by Agora backend.
 
-Hybrid approach:
+### Hybrid approach:
 - associate Nostr Wallet pub key to the user's `did:key`s that is bound to the ZK proof and its nullifier, broadcast that to Nostr
 - (cross) post normally to Nostr from Nostr Wallet
 
-
-### Implementation Details:
-- )  
-- Algorithmically, Nostr is less advanced than Bluesky but does allow custom feed creation.
-
-
-## Goal: supporting Both Protocols (and Others Like Farcaster), cross-posting, cross-identities, feed algorithm choice combining data from multiple social media protocol
+## Ideal: supporting Both Protocols (and Others Like Farcaster), cross-posting, cross-identities, feed algorithm choice combining data from multiple social media protocol
 
 ### Vision:
 **Rarimo protocol nullifier becomes the core user identifier**, binding to multiple `did:key`s (basic public keys) generated on the client side of the Agora app (using the standard WebCrypto API or secure Android/iOS storage). More or less one did:key per user device (smartphone, browser, etc). These `did:key`s would then be cryptographically bound to:  
@@ -101,3 +95,12 @@ did:keys are useful because they use built-in device crypto algorithms, that doe
 ### Future Enhancements:
 - Add **ZK reputation systems** to enhance trustworthiness.
 - Making RariMe compatible with ZKEmail so as to allow recovery of the RariMe private key with familiar UX.
+
+## Current conclusion for Agora (in progress)
+
+- We keep our login with RariMe and associate it with the `did:key mechanism`
+- Users can choose to asosciate their atproto account to these did:key and ZK proof, otherwise Agora would default to registering and storing a new one on their behalf. Email is made optional (requires forking PDS).
+- Users can add their own Nostr Wallets and associate these `did:key` and RariMe proofs to it
+- when users post, we crosspost data to atproto and Nostr, if they added a Notr wallet 
+- data is defined extensively using semantics, especially the compatibility between protocols
+- we use these semantics to create cross-protocol feed aggregators (same as bskyfor algorithmic choice but instead of limiting the data origins to being on atproto we can integrate other protocols)
