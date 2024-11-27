@@ -2,7 +2,7 @@
 
 ## What is Agora?
 
-See https;//agoracitizen.network
+See https://agoracitizen.network
 
 ## Background on Our Vision
 
