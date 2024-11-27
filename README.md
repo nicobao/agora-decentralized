@@ -35,8 +35,6 @@ For a detailed thread summarizing this idea, see:
 **Atproto Overview:**  
 Atproto relies on a **Personal Data Store (PDS)**, a server that stores cryptographic identifiers and personal data. To connect to your PDS, you need to provide an email address, which is kept off-protocol (not publicly shared).
 
-### Integration Approach:
-
 To integrate RariMe with Atproto, we have multiple options. 
 
 ### Option 1 - RariMe first:
