@@ -1,5 +1,9 @@
 # Notes on Integrating Agora with Decentralized Social Media Protocols
 
+## What is Agora?
+
+See https;//agoracitizen.network
+
 ## Background on Our Vision
 
 For more details, see:  
