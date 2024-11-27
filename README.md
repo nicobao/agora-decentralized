@@ -7,7 +7,7 @@ For more details, see:
 
 Relevant sections:  
 - **State of the Art**  
-- **3.3 Innovation*
+- **3.3 Innovation**
 
 Currently we use RariMe as follows:
 - Device self generates a keypair via standard webcrypto API or android/iOS secure storage and derives from it a `did:key`
