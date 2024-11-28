@@ -74,7 +74,7 @@ To integrate RariMe with Atproto, we have multiple options.
 - associate Nostr Wallet pub key to the user's `did:key`s that is bound to the ZK proof and its nullifier, broadcast that to Nostr
 - (cross) post normally to Nostr from Nostr Wallet
 
-## Ideal: supporting Both Protocols (and Others Like Farcaster), cross-posting, cross-identities, feed algorithm choice combining data from multiple social media protocol
+## Supporting both protocols and others like Farcaster and ActivityPub (Mastodon) all at once: cross-posting, cross-identities, feed algorithm choice combining data from multiple social media protocol
 
 ### Vision:
 **Rarimo protocol nullifier becomes the core user identifier**, binding to multiple `did:key`s (basic public keys) generated on the client side of the Agora app (using the standard WebCrypto API or secure Android/iOS storage). More or less one did:key per user device (smartphone, browser, etc). These `did:key`s would then be cryptographically bound to:  
